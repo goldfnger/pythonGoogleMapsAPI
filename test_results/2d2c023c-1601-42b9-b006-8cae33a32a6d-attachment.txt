@@ -1,0 +1,37 @@
+Creating a new place
+https://rahulshettyacademy.com/maps/api/place/add/json?key=qaclick123
+{"status":"OK","place_id":"fd50920b700d4c1fd24a554643e8f511","scope":"APP","reference":"df002751eb9565479e10c9cd275098b2df002751eb9565479e10c9cd275098b2","id":"df002751eb9565479e10c9cd275098b2"}
+Success. Status code: 200
+All json fields are exist
+status field is correct
+Verifying creation of new place
+https://rahulshettyacademy.com/maps/api/place/get/json?key=qaclick123&place_id=fd50920b700d4c1fd24a554643e8f511
+{"location":{"latitude":"-38.383494","longitude":"33.427362"},"accuracy":"50","name":"Frontline house","phone_number":"(+91) 983 893 3937","address":"29, side layout, cohen 09","types":"shoe park,shop","website":"http:\/\/google.com","language":"French-IN"}
+Success. Status code: 200
+All json fields are exist
+address field is correct
+Updating existing place with a new address
+https://rahulshettyacademy.com/maps/api/place/update/json?key=qaclick123
+{"msg":"Address successfully updated"}
+Success. Status code: 200
+All json fields are exist
+msg field is correct
+Verifying updated address
+https://rahulshettyacademy.com/maps/api/place/get/json?key=qaclick123&place_id=fd50920b700d4c1fd24a554643e8f511
+{"location":{"latitude":"-38.383494","longitude":"33.427362"},"accuracy":"50","name":"Frontline house","phone_number":"(+91) 983 893 3937","address":"100 SUPER STREET, WEB","types":"shoe park,shop","website":"http:\/\/google.com","language":"French-IN"}
+Success. Status code: 200
+address field is correct
+Deleting created place
+https://rahulshettyacademy.com/maps/api/place/delete/json?key=qaclick123
+{"status":"OK"}
+Success. Status code: 200
+All json fields are exist
+status field is correct
+Verifying deletion
+https://rahulshettyacademy.com/maps/api/place/get/json?key=qaclick123&place_id=fd50920b700d4c1fd24a554643e8f511
+{"msg":"Get operation failed, looks like place_id  doesn't exists"}
+Success. Status code: 404
+All json fields are exist
+msg field is correct
+Word failed is existing
+Testing is done. Location creating, updating, deleting are succeed.
